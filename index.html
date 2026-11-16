@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>PrimeFactor.app V3.4 — Obsidian Aurora & Observatory Blueprint</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Standard SEO Meta Tags -->
+    <meta
+      name="description"
+      content="The definitive competitive speed-mathematics infrastructure. Built on Cloud Firestore ELO persistence, asymmetric range firewalls, 12-tier prime decomposition strata, and the WebGL Number Theory Observatory."
+    />
+    <meta
+      name="keywords"
+      content="PrimeFactor, speed mathematics, prime decomposition, Cloud Firestore ELO, WebGL Observatory, mental math tournament, Rayaan Tasnim"
+    />
+    <meta name="author" content="Rayaan Tasnim, Olympiad Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://rayaantasnim.github.io/Prime-Factorization-Web/index.html"
+    />
+    <meta
+      property="og:title"
+      content="PrimeFactor.app V3.4 — Cloud Protocol & Observatory Blueprint"
+    />
+    <meta
+      property="og:description"
+      content="The definitive competitive speed-mathematics infrastructure. Built on Cloud Firestore ELO persistence, asymmetric range firewalls, 12-tier prime decomposition strata, and the WebGL Number Theory Observatory."
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/39190814/pexels-photo-39190814.jpeg"
+    />
+    <meta
+      property="og:image:alt"
+      content="PrimeFactor.app V3.4 Obsidian Aurora Interface and 12-Tier Rank Matrix Overview"
+    />
+    <meta property="og:site_name" content="PrimeFactor.app" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://rayaantasnim.github.io/Prime-Factorization-Web/index.html"
+    />
+    <meta
+      name="twitter:title"
+      content="PrimeFactor.app V3.4 — Cloud Protocol & Observatory Blueprint"
+    />
+    <meta
+      name="twitter:description"
+      content="Unveiling Cloud Firestore ELO persistence, Web Worker primality engines, and the WebGL Number Theory Observatory. Witness the Obsidian Aurora evolution."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.pexels.com/photos/39190814/pexels-photo-39190814.jpeg"
+    />
+
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP & ScrollTrigger Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="design.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="version-launch.css"/>
+  </head>
+  <body
+    class="font-sans text-slate-100 antialiased selection:bg-cyberCyan selection:text-slateDark min-h-screen flex flex-col justify-between"
+  >
+    <!-- ========================================== -->
+    <!-- NAVIGATION ARCHITECTURE & OVERLAY DRAWER  -->
+    <!-- ========================================== -->
+    <nav
+      class="fixed top-0 left-0 w-full z-40 bg-slateDark/95 backdrop-blur-xl border-b border-cyberCyan/30 px-4 sm:px-6 py-3 sm:py-4 shadow-2xl shadow-cyberCyan/10 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-cyberCyan via-indigo-600 to-cyberPurple flex items-center justify-center font-heading font-bold text-white text-xl sm:text-2xl neon-glow-cyan group-hover:scale-105 transition-transform"
+          >
+            π
+          </div>
+          <div>
+            <span
+              class="font-heading font-bold text-base sm:text-xl tracking-wider text-white text-glow-cyan"
+              >PrimeFactor<span class="text-cyberCyan">.app</span></span
+            >
+            <span
+              class="block text-[9px] sm:text-[10px] font-mono tracking-widest text-emerald-400 uppercase font-semibold leading-tight"
+              >V3.4 Obsidian Aurora</span
+            >
+          </div>
+        </a>
+
+        <!-- Control Actions: Hover-Activated Scroll Trigger & Navigation Hamburger -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          <!-- Hover-Activated Y-Axis Horizontal Scroll Toggle Button -->
+          <button
+            id="lifoDrawerBtn"
+            aria-label="Open LIFO Audit Stack"
+            class="h-9 sm:h-11 px-2.5 sm:px-4 rounded-xl bg-slateMid border border-cyberCyan/40 text-cyberCyan flex items-center gap-2 hover:bg-cyberCyan hover:text-slateDark neon-glow-cyan transition-all text-xs sm:text-sm font-mono font-semibold"
+          >
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span class="hidden md:inline">LIFO Stack</span>
+            <span
+              id="lifoBadgeCount"
+              class="w-5 h-5 rounded-full bg-cyberCyan text-slateDark font-bold text-[10px] flex items-center justify-center ml-0.5"
+              >5</span
+            >
+          </button>
+
+          <!-- Navigation Drawer Menu Toggle -->
+          <button
+            id="hamburgerBtn"
+            aria-label="Toggle Menu"
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-slateMid border border-cyberCyan/40 text-cyberCyan flex items-center justify-center hover:bg-cyberCyan hover:text-slateDark neon-glow-cyan transition-all"
+          >
+            <i class="fa-solid fa-bars text-base sm:text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Full-Screen Sliding Navigation Overlay Drawer -->
+    <div
+      id="navOverlay"
+      class="fixed inset-0 z-50 pointer-events-none overflow-hidden"
+    >
+      <!-- Backdrop -->
+      <div
+        id="navBackdrop"
+        class="absolute inset-0 bg-slateDark/90 backdrop-blur-md opacity-0 transition-opacity duration-300"
+      ></div>
+
+      <!-- Sliding Responsive Nav Panel -->
+      <div
+        id="navDrawer"
+        class="nav-drawer absolute top-0 right-0 w-full max-w-sm sm:max-w-md h-full bg-[#0B1120] text-white p-6 sm:p-8 shadow-2xl flex flex-col justify-between translate-x-full pointer-events-auto border-l border-cyberCyan/30 neon-glow-cyan overflow-y-auto"
+      >
+        <div>
+          <!-- Header -->
+          <div
+            class="flex justify-between items-center pb-6 border-b border-slate-800"
+          >
+            <span
+              class="font-mono text-xs tracking-widest text-cyberCyan uppercase font-bold"
+              >Navigation Node (Ctrl/Cmd+K)</span
+            >
+            <button
+              id="closeNavBtn"
+              aria-label="Close Navigation"
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-800 hover:bg-cyberCrimson hover:text-white flex items-center justify-center text-slate-300 neon-glow-crimson transition-all"
+            >
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Target Links -->
+          <div class="mt-6 sm:mt-8 flex flex-col gap-4 sm:gap-6">
+            <a
+              href="#hero"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >01. Launch Countdown</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#manifesto"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >02. Executive Verdict</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#philosophy"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >03. Cognitive Philosophy</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#rank-matrix"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >04. 12-Tier Rank Matrix</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#scoring"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >05. Operational Scoring</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#friday-clash"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >06. Live Arena & Dual-Vault</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#core-features"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >07. V3.4 / V3.5 Engine Features</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+            <a
+              href="#security"
+              class="nav-link text-lg sm:text-2xl font-heading font-semibold text-slate-200 hover:text-cyberCyan transition-colors flex items-center justify-between group py-1"
+            >
+              <span class="group-hover:translate-x-2 transition-transform"
+                >08. Cloud Security Charter</span
+              >
+              <i class="fa-solid fa-chevron-right text-xs text-cyberCyan"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Details -->
+        <div class="pt-6 border-t border-slate-800 mt-6">
+          <div class="text-[11px] sm:text-xs font-mono text-slate-300">
+            CLOUD PROTOCOL: V3.4 OBSIDIAN AURORA
+          </div>
+          <div
+            class="text-[11px] sm:text-xs font-mono text-cyberCyan mt-1 font-bold"
+          >
+            FIRESTORE RULES VERIFIED
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================================= -->
+    <!-- RIGHT OVERLAY NAVIGATION SYSTEM WITH FULL OPACITY & RESPONSIVE HIGH-READABILITY STACK      -->
+    <!-- ========================================================================================= -->
+    <div
+      id="lifoDrawer"
+      class="fixed top-0 right-0 w-full md:w-[680px] lg:w-[780px] h-full bg-[#0B1120] opacity-100 border-l-2 border-cyberCyan/60 z-50 p-4 sm:p-6 shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between neon-glow-cyan pointer-events-auto"
+    >
+      <!-- Header Controls -->
+      <div
+        class="flex justify-between items-center pb-4 border-b border-slate-800 shrink-0"
+      >
+        <div>
+          <h3
+            class="font-heading font-bold text-white text-lg sm:text-2xl flex items-center gap-2 text-glow-cyan"
+          >
+            <i class="fa-solid fa-clock-rotate-left text-cyberCyan"></i> LIFO
+            Audit Stack
+          </h3>
+          <p
+            class="text-[10px] sm:text-xs font-mono text-slate-300 mt-1 font-medium hidden xs:block"
+          >
+            Hover on desktop or swipe horizontally to navigate V3.4 / V3.5 cloud telemetry logs
+          </p>
+        </div>
+        <button
+          id="closeLifoBtn"
+          aria-label="Close Audit Drawer"
+          class="w-9 h-9 rounded-full bg-slate-800 hover:bg-cyberCrimson flex items-center justify-center text-slate-200 transition-colors border border-slate-700"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Dynamic Overlay Core: Vertical Layout with Hover-Activated Horizontal Scroll Conversion System -->
+      <div
+        id="scrollViewport"
+        class="my-4 flex-1 overflow-x-auto overflow-y-hidden md:overflow-y-auto no-scrollbar md:custom-scrollbar overlay-scroll-container transition-all"
+      >
+        <div
+          id="lifoStackContainer"
+          class="flex md:flex-col gap-3.5 min-h-[220px] md:min-h-0 items-stretch md:items-none"
+        >
+          <!-- Hardcoded V3.4 / V3.5 Milestone Audit Log Items -->
+          <div class="p-4 rounded-xl bg-slate-900 border border-cyberCyan/40 shrink-0 min-w-[260px] md:min-w-0">
+            <div class="flex justify-between items-center text-[10px] font-mono text-cyberCyan mb-1">
+              <span>[V3.5-OBS-05] WEBGL OBSERVATORY</span>
+              <span class="text-emerald-400">VERIFIED</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white">GPU Ulam Spiral &amp; Modular Cardioid Orrery</div>
+            <p class="text-[11px] text-slate-300 mt-1 font-mono">pf-observatory.js shaders &amp; live Eratosthenes sieve initialized.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-purple-500/40 shrink-0 min-w-[260px] md:min-w-0">
+            <div class="flex justify-between items-center text-[10px] font-mono text-purple-400 mb-1">
+              <span>[V3.5-COG-04] COGNITIVE MATRIX</span>
+              <span class="text-emerald-400">ACTIVE</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white">Deficit Diagnostics &amp; @google/genai Synthesizer</div>
+            <p class="text-[11px] text-slate-300 mt-1 font-mono">cognitive-matrix.html telemetry isolates {7, 13, 17} base slumps.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 shrink-0 min-w-[260px] md:min-w-0">
+            <div class="flex justify-between items-center text-[10px] font-mono text-emerald-400 mb-1">
+              <span>[V3.4-WRK-03] WEB WORKER ENGINE</span>
+              <span class="text-emerald-400">NON-BLOCKING</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white">Miller-Rabin &amp; Pollard's Rho (Brent Cycle)</div>
+            <p class="text-[11px] text-slate-300 mt-1 font-mono">Offloaded deterministic primality tests to isolated background threads.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-amber-500/40 shrink-0 min-w-[260px] md:min-w-0">
+            <div class="flex justify-between items-center text-[10px] font-mono text-amber-400 mb-1">
+              <span>[V3.4-SEC-02] FIRESTORE RULES</span>
+              <span class="text-emerald-400">ENFORCED</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white">Transactional matchId &amp; ±250 ELO Delta Bounds</div>
+            <p class="text-[11px] text-slate-300 mt-1 font-mono">firestore.rules anti-tamper shield locks uid, email &amp; 500 ELO floor.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900 border border-sky-500/40 shrink-0 min-w-[260px] md:min-w-0">
+            <div class="flex justify-between items-center text-[10px] font-mono text-sky-400 mb-1">
+              <span>[V3.4-AUTH-01] FIREBASE OAUTH 2.0</span>
+              <span class="text-emerald-400">SYNCED</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white">Google Sign-In &amp; Cross-Device Cloud ELO Ledger</div>
+            <p class="text-[11px] text-slate-300 mt-1 font-mono">Deprecated V2.0 local profiles in favor of real-time Cloud Firestore.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation System Interactive Indicators & Pop Operation Actions -->
+      <div
+        class="pt-4 border-t border-slate-800 shrink-0 flex flex-col sm:flex-row gap-3 items-center justify-between bg-[#0B1120]"
+      >
+        <div
+          class="flex items-center gap-2 text-[10px] sm:text-xs font-mono text-cyberCyan font-semibold"
+        >
+          <span
+            class="inline-block w-2.5 h-2.5 rounded-full bg-cyberCyan animate-ping"
+          ></span>
+          <span>CLOUD PROTOCOL: V3.4 OBSIDIAN AURORA TELEMETRY</span>
+        </div>
+        <button
+          id="clearLifoBtn"
+          class="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-cyberCrimson/30 hover:text-white text-cyberCrimson font-mono text-xs rounded-xl transition-all border border-cyberCrimson/60 neon-glow-crimson font-bold text-center tracking-wider"
+        >
+          POP TOP AUDIT ENTRY
+        </button>
+      </div>
+    </div>
+
+    <main class="flex-1">
+      <!-- ========================================== -->
+      <!-- SECTION 01: HERO COUNTDOWN GATE           -->
+      <!-- ========================================== -->
+      <section
+        id="hero"
+        class="relative min-h-[90vh] sm:min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 flex items-center justify-center bg-overlay-math text-white"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <div
+            class="inline-flex items-center gap-2 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full bg-slateDark/90 border border-cyberCyan text-cyberCyan text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase mb-4 sm:mb-6 neon-glow-cyan animate-pulse max-w-full overflow-hidden text-ellipsis whitespace-nowrap"
+          >
+            <i class="fa-solid fa-shield-halved shrink-0"></i>
+            <span>CLOUD PROTOCOL: V3.4 OBSIDIAN AURORA &bull; FIRESTORE RULES VERIFIED</span>
+          </div>
+
+          <h1
+            class="text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tight text-white mb-4 sm:mb-6 uppercase text-glow-cyan leading-tight"
+          >
+            PrimeFactor<span class="text-cyberCyan">.app</span> V3.4
+          </h1>
+          <p
+            class="max-w-3xl mx-auto text-sm sm:text-lg md:text-xl text-slate-200 mb-8 sm:mb-10 leading-relaxed font-light drop-shadow-md px-2"
+          >
+            Cloud Protocol &amp; Observatory Blueprint authored by Rayaan Tasnim. Built
+            on Cloud Firestore ELO persistence, asymmetric range firewalls, 12-tier
+            prime decomposition strata, and the WebGL Number Theory Observatory.
+          </p>
+
+          <!-- LIVE COUNTDOWN TICKER GRID -->
+          <div
+            class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-8 sm:mb-12"
+          >
+            <div
+              class="glass-panel-dark p-4 sm:p-6 rounded-2xl border border-cyberCyan/40 neon-glow-cyan"
+            >
+              <div
+                id="days"
+                class="text-2xl sm:text-4xl md:text-5xl font-mono font-bold text-cyberCyan text-glow-cyan"
+              >
+                00
+              </div>
+              <div
+                class="text-[10px] sm:text-xs font-mono text-slate-300 uppercase tracking-widest mt-1 font-semibold"
+              >
+                Days
+              </div>
+            </div>
+            <div
+              class="glass-panel-dark p-4 sm:p-6 rounded-2xl border border-cyberCyan/40 neon-glow-cyan"
+            >
+              <div
+                id="hours"
+                class="text-2xl sm:text-4xl md:text-5xl font-mono font-bold text-cyberCyan text-glow-cyan"
+              >
+                00
+              </div>
+              <div
+                class="text-[10px] sm:text-xs font-mono text-slate-300 uppercase tracking-widest mt-1 font-semibold"
+              >
+                Hours
+              </div>
+            </div>
+            <div
+              class="glass-panel-dark p-4 sm:p-6 rounded-2xl border border-cyberCyan/40 neon-glow-cyan"
+            >
+              <div
+                id="minutes"
+                class="text-2xl sm:text-4xl md:text-5xl font-mono font-bold text-cyberCyan text-glow-cyan"
+              >
+                00
+              </div>
+              <div
+                class="text-[10px] sm:text-xs font-mono text-slate-300 uppercase tracking-widest mt-1 font-semibold"
+              >
+                Minutes
+              </div>
+            </div>
+            <div
+              class="glass-panel-dark p-4 sm:p-6 rounded-2xl border border-cyberCrimson/50 neon-glow-crimson"
+            >
+              <div
+                id="seconds"
+                class="text-2xl sm:text-4xl md:text-5xl font-mono font-bold text-cyberCrimson"
+              >
+                00
+              </div>
+              <div
+                class="text-[10px] sm:text-xs font-mono text-slate-300 uppercase tracking-widest mt-1 font-semibold"
+              >
+                Seconds
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Triggers -->
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-5 px-4"
+          >
+            <a
+              href="#rank-matrix"
+              class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-cyberCyan to-blue-600 text-slateDark font-heading font-bold text-base sm:text-lg hover:brightness-125 transition-all shadow-xl neon-glow-cyan flex items-center justify-center"
+            >
+              Explore Rank Matrix
+              <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+            </a>
+            <a
+              href="#philosophy"
+              class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-base sm:text-lg border border-purple-500/50 neon-glow-purple transition-all flex items-center justify-center"
+            >
+              Read Cognitive Matrix
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 02: EXECUTIVE VERDICT & MANIFESTO  -->
+      <!-- ========================================== -->
+      <section id="manifesto" class="py-16 sm:py-24 bg-canvas relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div
+            class="glass-panel p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-cyberCyan/40 neon-glow-cyan relative mt-4"
+          >
+            <div
+              class="absolute -top-4 sm:-top-5 left-4 sm:left-10 px-3 sm:px-5 py-1 sm:py-1.5 bg-slateDark text-cyberCyan text-[10px] sm:text-xs font-mono rounded-full font-bold uppercase tracking-widest border border-cyberCyan neon-glow-cyan"
+            >
+              Executive Charter &bull; Olympiad Edge
+            </div>
+
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white mb-4 sm:mb-6 mt-2 text-glow-cyan"
+            >
+              Architectural Mandate for V3.4 / V3.5
+            </h2>
+
+            <div
+              class="space-y-4 sm:space-y-5 text-slate-200 leading-relaxed text-sm sm:text-base md:text-lg text-justify"
+            >
+              <p>
+                While Version 2.0 relied on local-only browser profiles and
+                client-side HMAC tokens, Version 3.4 ("Obsidian Aurora") and
+                Version 3.5 ("Observatory Edition") migrate the entire ledger to
+                Google OAuth 2.0 identity verification and server-enforced Cloud
+                Firestore persistence—eliminating browser storage tampering
+                across devices.
+              </p>
+              <p
+                class="font-semibold text-white border-l-2 sm:border-l-4 text-justify border-cyberCyan pl-3 sm:pl-4 py-2 bg-slate-900/60 rounded-r-xl text-xs sm:text-base"
+              >
+                "Version 3.4 is a cloud-native architectural overhaul. Every
+                ranked session executes transactional idempotent match commits
+                (matchId) while deterministic Miller-Rabin and Pollard's Rho
+                engines run inside non-blocking Web Worker threads."
+              </p>
+              <p class="text-justify">
+                Paired with our WCAG AA Obsidian Aurora glassmorphism interface,
+                Ctrl/Cmd+K command palette, and real-time WebGL Number Theory
+                Observatory, ratings now reflect verified computational velocity.
+              </p>
+            </div>
+
+            <!-- Signoff Block -->
+            <div
+              class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-700/80 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+            >
+              <div>
+                <div
+                  class="font-heading font-bold text-white text-base sm:text-lg"
+                >
+                  Rayaan Tasnim
+                </div>
+                <div class="text-[11px] sm:text-xs font-mono text-cyberCyan">
+                  Chief Protocol Architect &amp; Senior Olympiad Edge Analyst
+                </div>
+              </div>
+              <div
+                class="text-[10px] sm:text-xs font-mono text-emerald-400 bg-slate-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border border-emerald-500/40 neon-glow-mint w-full sm:w-auto text-center"
+              >
+                Cloud Verification ID: #PF-V3.4-CLOUD-AURORA
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 03: THE COGNITIVE PHILOSOPHY        -->
+      <!-- ========================================== -->
+      <section
+        id="philosophy"
+        class="py-16 sm:py-24 bg-overlay-abstract text-white relative"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 bg-black">
+            <span
+              class="text-cyberCyan font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest text-glow-cyan"
+              >Cognitive Deficit Architecture</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mt-1 sm:mt-2"
+            >
+              The Cognitive Philosophy
+            </h2>
+            <p class="text-slate-300 mt-2 sm:mt-4 text-sm sm:text-lg">
+              How PrimeFactor V3.5 diagnoses latency slumps and retrains human
+              pattern recognition via Quantum Diagnostics telemetry.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+            <!-- Pillar 1 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl card-3d border-t-4 border-t-cyberCyan neon-glow-cyan"
+            >
+              <div
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-cyan-950 text-cyberCyan flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 neon-glow-cyan"
+              >
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 sm:mb-3"
+              >
+                Mental Sieve Conditioning
+              </h3>
+              <p
+                class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify"
+              >
+                Diagnostic telemetry isolates deficit prime bases such as
+                {7, 13, 17}, prescribing targeted 1001 block divisibility rules
+                to collapse composite search spaces before conscious calculation.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl card-3d border-t-4 border-t-cyberPurple neon-glow-purple"
+            >
+              <div
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-purple-950 text-cyberPurple flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 neon-glow-purple"
+              >
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 sm:mb-3"
+              >
+                Modular Reflex Loops
+              </h3>
+              <p
+                class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify"
+              >
+                Iterative speed sessions condition Fermat's difference of
+                squares ($a^2 - b^2$) and residue recognition, converting dense
+                semi-prime decompositions into instant visual reflex loops.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl card-3d border-t-4 border-t-cyberMint neon-glow-mint sm:col-span-2 md:col-span-1"
+            >
+              <div
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-emerald-950 text-cyberMint flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 neon-glow-mint"
+              >
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 sm:mb-3"
+              >
+                Stress-Induced Accuracy
+              </h3>
+              <p
+                class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify"
+              >
+                Under accelerated clock pressure and 3-strike disqualification
+                thresholds, the Cognitive Deficit Architecture tracks latency
+                slumps—forging precision under extreme competitive load.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 04: OFFICIAL 12-TIER RANK MATRIX   -->
+      <!-- ========================================== -->
+      <section
+        id="rank-matrix"
+        class="py-16 sm:py-24 bg-slateDark text-white relative"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span
+              class="text-cyberCyan font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest text-glow-cyan"
+              >Competitive Hierarchy</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mt-1 sm:mt-2"
+            >
+              Official 12-Tier Rank Matrix
+            </h2>
+            <p class="text-slate-300 mt-2 sm:mt-4 text-sm sm:text-lg">
+              Asymmetric range firewalls protect elite strata while offering
+              structured progression from Initiate to Prime Singularity.
+            </p>
+          </div>
+
+          <!-- 12 Tier Responsive Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          >
+            <!-- Tier 1 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-amber-400 neon-glow-gold card-3d"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">👑</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-amber-400/20 text-amber-400 font-mono text-[11px] sm:text-xs font-bold border border-amber-400/50"
+                  >ELO 3000+</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-amber-400 font-semibold uppercase"
+              >
+                Tier 1
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 text-glow-gold"
+              >
+                Prime Singularity
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Apex cognitive computing bracket restricted to unrated practice
+                to eliminate trivial point-farming.
+              </p>
+            </div>
+
+            <!-- Tier 2 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-purple-500 neon-glow-purple card-3d"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">♾️</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 font-mono text-[11px] sm:text-xs font-bold border border-purple-500/50"
+                  >ELO 2700 - 2999</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-purple-400 font-semibold uppercase"
+              >
+                Tier 2
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 text-glow-purple"
+              >
+                Riemann Transcendentalist
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Strata locked from low-tier rated play, forcing matches into
+                virtual unrated simulations.
+              </p>
+            </div>
+
+            <!-- Tier 3 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-cyberCyan neon-glow-cyan card-3d"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">⚡</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyberCyan font-mono text-[11px] sm:text-xs font-bold border border-cyan-500/50"
+                  >ELO 2400 - 2699</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-cyberCyan font-semibold uppercase"
+              >
+                Tier 3
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2 text-glow-cyan"
+              >
+                Canonical Analyst
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Elite echelon demonstrating exceptional structural prime
+                decomposition precision under accelerated time constraints.
+              </p>
+            </div>
+
+            <!-- Tier 4 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-blue-500 hover:border-blue-400 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🔐</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px] sm:text-xs font-bold border border-blue-500/50"
+                  >ELO 2200 - 2399</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-blue-400 font-semibold uppercase"
+              >
+                Tier 4
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Gaussian Cryptographer
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Advanced tier thriving on decoding complex, encryption-grade
+                integer fields and trick inputs.
+              </p>
+            </div>
+
+            <!-- Tier 5 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-indigo-500 hover:border-indigo-400 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(99, 102, 241, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">📐</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 font-mono text-[11px] sm:text-xs font-bold border border-indigo-500/50"
+                  >ELO 2000 - 2199</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-indigo-400 font-semibold uppercase"
+              >
+                Tier 5
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Eulerian Sentinel
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Watchful guardian tier reflecting disciplined pacing and steady,
+                modular arithmetic accuracy.
+              </p>
+            </div>
+
+            <!-- Tier 6 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-emerald-500 neon-glow-mint card-3d"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">📈</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[11px] sm:text-xs font-bold border border-emerald-500/50"
+                  >ELO 1800 - 1999</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-emerald-400 font-semibold uppercase"
+              >
+                Tier 6
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Logarithmic Vector
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Milestone tier activating the 1800+ ELO High-Tier Dampener
+                (1800 / R_user) and 14-day inactivity decay (-10 ELO/week).
+              </p>
+            </div>
+
+            <!-- Tier 7 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-teal-500 hover:border-teal-400 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(20, 184, 166, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🔍</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-teal-500/20 text-teal-300 font-mono text-[11px] sm:text-xs font-bold border border-teal-500/50"
+                  >ELO 1600 - 1799</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-teal-400 font-semibold uppercase"
+              >
+                Tier 7
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Prime Strategist
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Tactical division relying on calculated risk-taking and adaptive
+                lifeline resource management.
+              </p>
+            </div>
+
+            <!-- Tier 8 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-sky-500 hover:border-sky-400 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(14, 165, 233, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">⚙️</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 font-mono text-[11px] sm:text-xs font-bold border border-sky-500/50"
+                  >ELO 1400 - 1599</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-sky-400 font-semibold uppercase"
+              >
+                Tier 8
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Modular Operator
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Competitor displaying growing fluency across textbook prime
+                fields and standard number fields.
+              </p>
+            </div>
+
+            <!-- Tier 9 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-yellow-600 hover:border-yellow-500 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(202, 138, 4, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🎓</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-yellow-600/20 text-yellow-300 font-mono text-[11px] sm:text-xs font-bold border border-yellow-600/50"
+                  >ELO 1200 - 1399</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-yellow-400 font-semibold uppercase"
+              >
+                Tier 9
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Radix Scholar
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Academic level focused on consolidating a strong theoretical
+                base and sharpening 3-digit divisor skills.
+              </p>
+            </div>
+
+            <!-- Tier 10 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-orange-500 hover:border-orange-400 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(249, 115, 22, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🧮</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-orange-500/20 text-orange-300 font-mono text-[11px] sm:text-xs font-bold border border-orange-500/50"
+                  >ELO 900 - 1199</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-orange-400 font-semibold uppercase"
+              >
+                Tier 10
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Sieve Calibrator
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Standard competitive baseline emphasizing structural consistency
+                and sieve-based prime detection techniques.
+              </p>
+            </div>
+
+            <!-- Tier 11 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-stone-400 hover:border-stone-300 transition-all card-3d"
+              style="box-shadow: 0 0 20px rgba(168, 162, 158, 0.2)"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🧩</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-stone-400/20 text-stone-300 font-mono text-[11px] sm:text-xs font-bold border border-stone-400/50"
+                  >ELO 500 - 899</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-stone-400 font-semibold uppercase"
+              >
+                Tier 11
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Composite Apprentice
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                The official entry-level onboarding floor initialized
+                automatically in Cloud Firestore upon Google Sign-In.
+              </p>
+            </div>
+
+            <!-- Tier 12 -->
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border-l-4 border-l-red-600 neon-glow-crimson card-3d"
+            >
+              <div class="flex justify-between items-start mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl">🪵</span>
+                <span
+                  class="px-2.5 py-1 rounded bg-red-600/20 text-red-300 font-mono text-[11px] sm:text-xs font-bold border border-red-600/50"
+                  >ELO 0 - 499</span
+                >
+              </div>
+              <div
+                class="text-[10px] font-mono text-red-400 font-semibold uppercase"
+              >
+                Tier 12
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Foundry Initiate
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Absolute technical bottom serving as a stabilizing safety buffer
+                for losing streaks or security liquidations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 05: OPERATIONAL SCORING ARCHITECTURE-->
+      <!-- ========================================== -->
+      <section id="scoring" class="py-16 sm:py-24 bg-canvas relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span
+              class="text-cyberCyan font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest text-glow-cyan"
+              >12-Point Scoring Matrix</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mt-1 sm:mt-2"
+            >
+              Operational Scoring Architecture
+            </h2>
+            <p class="text-slate-300 mt-2 sm:mt-4 text-sm sm:text-lg">
+              V3.4 12-Point Scoring Matrix and velocity-scaled ELO equation
+              governing clean clears, strike penalties, and tactical lifelines.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <!-- Direct Clears -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-emerald-500/40 neon-glow-mint"
+            >
+              <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl font-bold neon-glow-mint shrink-0"
+                >
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                  <h3
+                    class="font-heading font-bold text-xl sm:text-2xl text-white"
+                  >
+                    First-Attempt Clears &amp; Dynamic ELO
+                  </h3>
+                  <span
+                    class="text-[11px] sm:text-xs font-mono text-emerald-400 font-bold"
+                    >+10 Pts Clean Clear | +5 Pts 2nd-Chance</span
+                  >
+                </div>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                Clean 1st-attempt solves award +10 pts (+5 pts for 2nd-chance
+                overtime/hints), with streak volatility K scaling logarithmically
+                and velocity V scaling up to 3.5x for sub-second solves:
+              </p>
+              <div
+                class="bg-slate-950 text-emerald-400 font-mono text-[11px] sm:text-xs p-3 sm:p-4 rounded-xl border border-emerald-500/30 overflow-x-auto"
+              >
+                ΔR = K × (Net Accuracy% - E) × V  |  V_max = 3.5x (Sub-Second Solve)
+              </div>
+            </div>
+
+            <!-- Overtime & Penalty -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-amber-500/40 neon-glow-gold"
+            >
+              <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-amber-950 text-amber-400 flex items-center justify-center text-xl sm:text-2xl font-bold neon-glow-gold shrink-0"
+                >
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                  <h3
+                    class="font-heading font-bold text-xl sm:text-2xl text-white"
+                  >
+                    3-Strike Penalty &amp; Tactical Lifelines
+                  </h3>
+                  <span
+                    class="text-[11px] sm:text-xs font-mono text-amber-400 font-bold"
+                    >-2 Pts Miss (-5 Pts OT) | 3 Strikes = -10 Pt DQ</span
+                  >
+                </div>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                1st-attempt misses deduct -2 pts (-5 pts in overtime); 3 strikes
+                trigger immediate disqualification (-10 pts). Tactical assets
+                balance risk and clock control:
+              </p>
+              <div
+                class="bg-slate-950 text-amber-400 font-mono text-[11px] sm:text-xs p-3 sm:p-4 rounded-xl border border-amber-500/30 overflow-x-auto"
+              >
+                Scratchpad 5s (-5 pts) | +30s Clock (-3 pts &amp; 2% ELO damp) | Noise Filter (-4 pts) | Pause (-2 pts)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 06: LIVE ARENA & DUAL-VAULT CIRCUIT-->
+      <!-- ========================================== -->
+      <section
+        id="friday-clash"
+        class="py-16 sm:py-24 bg-overlay-tech text-white relative"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+          <span
+            class="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-cyberCrimson/20 border border-cyberCrimson text-cyberCrimson font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest inline-block mb-4 neon-glow-crimson"
+          >
+            180-Second Ranked Contest Circuit
+          </span>
+          <h2
+            class="text-3xl sm:text-5xl md:text-6xl font-heading font-bold text-white mb-4 sm:mb-6 uppercase text-glow-cyan"
+          >
+            Live Arena &amp; Dual-Vault Circuit
+          </h2>
+          <p
+            class="max-w-3xl mx-auto text-slate-200 text-sm sm:text-lg mb-8 sm:mb-12 leading-relaxed"
+          >
+            High-velocity 180-second ranked sprints paired with our Playable
+            5-Second Hero Mini-Challenge, GSAP Instant Randomizer, and 100+
+            Dual-Vault Olympiad Medals certified in Cloud Firestore.
+          </p>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto"
+          >
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border border-cyberCyan/40 text-center neon-glow-cyan card-3d"
+            >
+              <i
+                class="fa-solid fa-clock text-cyberCyan text-2xl sm:text-3xl mb-2 sm:mb-3 text-glow-cyan"
+              ></i>
+              <h4
+                class="font-heading font-bold text-base sm:text-lg text-white"
+              >
+                180s Ranked Circuit
+              </h4>
+              <p class="text-slate-300 text-[11px] sm:text-xs mt-1">
+                Includes playable 5-second Hero Mini-Challenge warmup
+              </p>
+            </div>
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border border-cyberCrimson/50 text-center neon-glow-crimson card-3d"
+            >
+              <i
+                class="fa-solid fa-shuffle text-cyberCrimson text-2xl sm:text-3xl mb-2 sm:mb-3"
+              ></i>
+              <h4
+                class="font-heading font-bold text-base sm:text-lg text-white"
+              >
+                GSAP Instant Randomizer
+              </h4>
+              <p class="text-slate-300 text-[11px] sm:text-xs mt-1">
+                Zero-bias composite field generation across 12 strata
+              </p>
+            </div>
+            <div
+              class="glass-panel-dark p-5 sm:p-6 rounded-2xl border border-amber-500/50 text-center neon-glow-gold card-3d"
+            >
+              <i
+                class="fa-solid fa-trophy text-amber-400 text-2xl sm:text-3xl mb-2 sm:mb-3 text-glow-gold"
+              ></i>
+              <h4
+                class="font-heading font-bold text-base sm:text-lg text-white"
+              >
+                100+ Dual-Vault Medals
+              </h4>
+              <p class="text-slate-300 text-[11px] sm:text-xs mt-1">
+                Olympiad milestone honors verified in Cloud Firestore
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 07: V3.4 / V3.5 ENGINE BREAKDOWN   -->
+      <!-- ========================================== -->
+      <section id="core-features" class="py-16 sm:py-24 bg-canvas relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span
+              class="text-cyberCyan font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest text-glow-cyan"
+              >Obsidian Aurora Innovations</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mt-1 sm:mt-2"
+            >
+              V3.4 / V3.5 Core Feature Engine
+            </h2>
+          </div>
+
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyberCyan/40 card-3d neon-glow-cyan"
+            >
+              <div
+                class="text-cyberCyan text-2xl sm:text-3xl mb-3 sm:mb-4 text-glow-cyan"
+              >
+                <i class="fa-solid fa-atom"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                WebGL Number Theory Observatory
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Zero-dependency GPU Ulam spiral, modular times-table cardioid
+                orrery, and real-time Eratosthenes sieve powered by
+                pf-observatory.js.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyberPurple/40 card-3d neon-glow-purple"
+            >
+              <div
+                class="text-cyberPurple text-2xl sm:text-3xl mb-3 sm:mb-4 text-glow-purple"
+              >
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Cognitive Diagnostics &amp; GenAI Synthesizer
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Heuristic latency and deficit-base telemetry in
+                cognitive-matrix.html paired with @google/genai adaptive
+                challenge synthesis.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="glass-panel p-6 sm:p-8 rounded-2xl border border-cyberCrimson/40 card-3d neon-glow-crimson sm:col-span-2 md:col-span-1"
+            >
+              <div class="text-cyberCrimson text-2xl sm:text-3xl mb-3 sm:mb-4">
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+              <h3
+                class="font-heading font-bold text-lg sm:text-xl text-white mb-2"
+              >
+                Page Visibility Focus Guard
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Hardware focus monitor detecting tab switches or window blur
+                during ranked matches, enforcing an instant strike and -5 pt
+                deduction (-5 ELO on refresh).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SECTION 08: SECURITY CHARTER               -->
+      <!-- ========================================== -->
+      <section
+        id="security"
+        class="py-16 sm:py-24 bg-slateDark text-white relative"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div
+            class="glass-panel-dark p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl border border-cyberCyan/40 neon-glow-cyan"
+          >
+            <div class="flex items-center gap-3 mb-4 sm:mb-6 text-cyberCyan">
+              <i
+                class="fa-solid fa-shield-cat text-2xl sm:text-3xl text-glow-cyan"
+              ></i>
+              <h2
+                class="text-2xl sm:text-3xl font-heading font-bold text-white uppercase text-glow-cyan"
+              >
+                Google OAuth 2.0 &amp; firestore.rules Shield
+              </h2>
+            </div>
+            <p
+              class="text-slate-200 leading-relaxed text-xs sm:text-base md:text-lg mb-6"
+            >
+              Replacing V2.0 client-side HMAC tokens, PrimeFactor V3.4 enforces
+              server-validated Cloud Firestore security rules: immutable uid,
+              email, and createdAt fields, a strict 500 ELO creation floor, ±250
+              per-write ELO delta bounds, monotonic match counters, and
+              transactional idempotent matchId commits.
+            </p>
+            <div
+              class="p-3 sm:p-4 bg-slate-950 rounded-xl font-mono text-[10px] sm:text-xs text-cyberCyan border border-cyberCyan/40 overflow-x-auto neon-glow-cyan"
+            >
+              <code
+                >allow update: if request.auth.uid == userId &amp;&amp;
+                math.abs(request.resource.data.elo - resource.data.elo) &lt;= 250
+                &amp;&amp; request.resource.data.matches == resource.data.matches + 1
+                &amp;&amp; !exists(/databases/$(database)/documents/matches/$(matchId));</code
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- Elite Announcement Section: Protocol Transition Matrix -->
+<div class="v3-triumph-stage">
+    <div class="v3-glass-shield"></div>
+    <div class="v3-grid-overlay"></div>
+    
+    <div class="v3-triumph-core">
+        <div class="v3-status-cluster">
+            <span class="v3-pulse-node active"></span>
+            <span class="v3-status-label">CURRENT FIELD: CLOUD PROTOCOL V3.4</span>
+        </div>
+        
+        <h2 class="v3-triumph-headline">
+            THE EVOLUTION IS UNLEASHED
+        </h2>
+        
+        <p class="v3-triumph-subtext">
+            Architectural staging for <span class="v3-glow-version">Version 4.0</span> is underway—bringing
+            global real-time leaderboards and asynchronous peer challenges to the Obsidian Aurora arena.
+        </p>
+
+        <div class="v3-badge-tether">
+            <div class="v3-tether-pill v3-pill-blue">
+                <span class="v3-pill-icon">⚡</span> WEB WORKER SPEED
+            </div>
+            <div class="v3-tether-pill v3-pill-cyan">
+                <span class="v3-pill-icon">☁️</span> CLOUD FIRESTORE ELO
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- FOOTER ARCHITECTURE                       -->
+    <!-- ========================================== -->
+    <footer
+      class="bg-slate-950 text-slate-400 py-8 sm:py-12 border-t border-cyberCyan/30 font-mono text-[11px] sm:text-xs"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-7 h-7 sm:w-8 sm:h-8 rounded bg-cyberCyan flex items-center justify-center font-heading font-bold text-slateDark text-base sm:text-lg neon-glow-cyan"
+          >
+            π
+          </div>
+          <span class="text-white font-bold"
+            >PrimeFactor.app &bull; V3.4 OBSIDIAN AURORA ARCHITECTURE &bull; 2026</span
+          >
+        </div>
+        <div>
+          Authored by
+          <span class="text-cyberCyan font-semibold">Olympiad Edge</span> |
+          Authorized by
+          <span class="text-white font-semibold">Rayaan Tasnim</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIC & GSAP ANIMATIONS        -->
+    <!-- ========================================== -->
+    <script src="script.js"></script>
+  </body>
+</html>
